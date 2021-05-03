@@ -67,6 +67,6 @@ if(fs.existsSync('./docs/delete.txt')){
        if(error){
         console.log(error);
        }
-       console.log('file deleted');
+       console.log('file is deleted');
     })
 }
