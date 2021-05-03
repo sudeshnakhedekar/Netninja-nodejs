@@ -1,2 +1,10 @@
-const name ='yoshi joshi';
-console.log(name);
+// Global object
+
+//console.log(global);
+
+// 
+
+
+// console.log(__dirname);// get's the diectory name
+// console.log(__filename);// get's the diectory name + filename
+
