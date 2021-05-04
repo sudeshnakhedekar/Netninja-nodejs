@@ -1,5 +1,6 @@
 const hhtp = require('http');
 const fs = require('fs');
+
 //creates a server
 const server = hhtp.createServer((request , response) =>{
  console.log(request.url, request.method);
@@ -16,7 +17,7 @@ const server = hhtp.createServer((request , response) =>{
          path +='about.html';
          response.statusCode =200;
          break;
-     case '/about-me':
+     case '/about-us':
          response.statusCode =301;
         response.setHeader('Location','/about')
          break;    
