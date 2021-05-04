@@ -6,9 +6,9 @@ const server = hhtp.createServer((request , response) =>{
 
  response.setHeader('Content-Type' ,'text/html')
 
- response.write('<head><link rel="stylesheet" href="#"></head>')
- response.write('<p>hello ,ninjas</p>');
- response.write('<p>hello again ,ninjas</p>');
+  response.write('<head><link rel="stylesheet" href="#"></head>')
+ response.write('<p>hello ninjas</p>');
+ response.write('<p>hello again ninjas</p>');
  response.end();
 });
 
