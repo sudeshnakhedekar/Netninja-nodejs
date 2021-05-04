@@ -41,22 +41,22 @@ const fs = require('fs');
 // }
 
 
-//remove the directory
-if(!fs.existsSync('./assets')){
-    fs.mkdir('./assets' , (error) =>{
-        if(error){
-        console.log(error);
-        }
-        console.log('folder created');
-    });
-}else{
-   fs.rmdir('./assets',(error) =>{
-       if(error){
-           console.log(error);
-       }
-       console.log('folder  deleted');
-   }) 
-}
+// //remove the directory
+// if(!fs.existsSync('./assets')){
+//     fs.mkdir('./assets' , (error) =>{
+//         if(error){
+//         console.log(error);
+//         }
+//         console.log('folder created');
+//     });
+// }else{
+//    fs.rmdir('./assets',(error) =>{
+//        if(error){
+//            console.log(error);
+//        }
+//        console.log('folder  deleted');
+//    }) 
+// }
 
 
 
