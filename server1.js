@@ -16,6 +16,10 @@ const server = hhtp.createServer((request , response) =>{
          path +='about.html';
          response.statusCode =200;
          break;
+     case '/about-me':
+         response.statusCode =301;
+        response.setHeader('Location','/about')
+         break;    
      default:
         response.statusCode =404;
          path +='404.html';
