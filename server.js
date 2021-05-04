@@ -2,7 +2,7 @@ const hhtp = require('http');
 
 //creates a server
 const server = hhtp.createServer((request , response) =>{
- console.log('request made..');
+ console.log(request.url, request.method);
 });
 
 //listening to port 3000 on localhost
