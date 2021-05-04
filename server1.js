@@ -10,11 +10,14 @@ const server = hhtp.createServer((request , response) =>{
  switch(request.url){
      case '/':
          path +='index.html';
+        response.statusCode =200;
          break;
      case '/about':
          path +='about.html';
+         response.statusCode =200;
          break;
      default:
+        response.statusCode =404;
          path +='404.html';
  }
 
@@ -26,8 +29,8 @@ fs.readFile(path ,(error, data) =>{
 console.log(error);
 response.end();
     }else{
-        response.write(data);
-        response.end();
+        // response.write(data);
+        response.end(data);
     }
 })
 
