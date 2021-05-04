@@ -14,7 +14,7 @@ const server = hhtp.createServer((request , response) =>{
 
 //listening to port 3000 on localhost
 server.listen(3000, 'localhost' , ()=>{
-    console.log('Listening for request made on port 3000');
+    console.log('Listening for request you made on port 3000');
 }); 
 
 
