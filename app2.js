@@ -8,7 +8,7 @@ const express = require('express');
 
 
 
-  //listen for request
+  //listen for requests
   app.listen(3000);
 
   app.get('/' ,(request, response) =>{
