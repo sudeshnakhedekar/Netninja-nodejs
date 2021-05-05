@@ -1,3 +1,5 @@
+//Concept of EJS
+
 const express = require('express');
 
 //express app
