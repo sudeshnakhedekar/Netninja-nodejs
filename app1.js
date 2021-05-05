@@ -1,9 +1,13 @@
+// NOTE:  YOU HAVE TO CREATE HTML FILES i.e index.html , about.html, and 404.html to run this code vist github.
+
+
 const express = require('express');
 
 //express app
  const app = express();
 
-  //listing to request
+ 
+  //listen for request
   app.listen(3000);
 
   app.get('/' ,(request, response) =>{
