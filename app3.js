@@ -1,7 +1,7 @@
 //Concept of EJS
 
 const express = require('express');
-
+const morgan = require('morgan');
 //express app
  const app = express();
 
@@ -13,22 +13,7 @@ const express = require('express');
   //listen for requests
   app.listen(3000);
 
-app.use((request, response, next)=>{
-console.log('new request made:');
-console.log('host: ' ,request.hostname);
-console.log('path: ',request.path);
-console.log('method: ',request.method);
-next();
-})
-
-
-app.use((request, response, next)=>{
-    console.log('in the next middleware');
-    
-    next();
-    })
-
-
+  app.use(morgan('dev'))
 
   app.get('/' ,(request, response) =>{
     const blogs = [
@@ -38,6 +23,11 @@ app.use((request, response, next)=>{
   ];
    response.render('index',{title :'Home',blogs})
   });
+
+
+
+
+
 
   app.get('/about' ,(request, response) =>{
     // response.send('<p>About Page</p>')
