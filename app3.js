@@ -13,12 +13,22 @@ const express = require('express');
   //listen for requests
   app.listen(3000);
 
-app.use((request, response)=>{
+app.use((request, response, next)=>{
 console.log('new request made:');
 console.log('host: ' ,request.hostname);
 console.log('path: ',request.path);
 console.log('method: ',request.method);
+next();
 })
+
+
+app.use((request, response, next)=>{
+    console.log('in the next middleware');
+    
+    next();
+    })
+
+
 
   app.get('/' ,(request, response) =>{
     const blogs = [
