@@ -13,7 +13,11 @@ const morgan = require('morgan');
   //listen for requests
   app.listen(3000);
 
+  //middleware & static files
+  app.use(express.static('public'))
+
   app.use(morgan('dev'))
+
 
   app.get('/' ,(request, response) =>{
     const blogs = [
